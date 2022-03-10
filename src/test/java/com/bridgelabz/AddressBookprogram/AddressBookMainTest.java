@@ -12,5 +12,4 @@ class AddressBookMainTest
             assertTrue( true );
         }
 
-
 }
