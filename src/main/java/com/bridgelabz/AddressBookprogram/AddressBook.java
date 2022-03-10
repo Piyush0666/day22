@@ -6,24 +6,24 @@ import java.util.List;
 import java.util.Scanner;
 
 public class AddressBook {
-    Scanner scan = new Scanner(System.in);
     public List<Contacts> list = new ArrayList<>();
+    Scanner scan = new Scanner(System.in);
 
     public void operation() {
-        System.out.println("Enter the number according to to requirment");
-        System.out.println("Enter 1 to Add");
-        System.out.println("Enter 2 to Edit");
-        System.out.println("Enter 3 to Delete");
+        System.out.println("Enter Number of contact you want to add");
         int count = scan.nextInt();
-        AddressBook addressBook = new AddressBook();
         int contactCount = 1;
         while (contactCount <= count) {
 
-            addressBook.add();
+            this.add();
             contactCount++;
         }
         boolean status = true;
         do {
+            System.out.println("Enter the number according to to requirment");
+            System.out.println("Enter 1 to Add");
+            System.out.println("Enter 2 to Edit");
+            System.out.println("Enter 3 to Delete");
             switch (scan.nextInt()) {
                 case 1:
                     add();
@@ -34,6 +34,8 @@ public class AddressBook {
                 case 3:
                     delete();
                     break;
+                default:
+                    status = false;
             }
         } while (status);
     }
@@ -75,6 +77,7 @@ public class AddressBook {
         print();
 
     }
+
     public void edit() {
         System.out.println("Enter your First name:");
         String firstName = scan.next();
@@ -140,5 +143,4 @@ public class AddressBook {
             System.out.println(it.next());
         }
     }
-
 }
