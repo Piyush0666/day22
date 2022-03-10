@@ -5,9 +5,10 @@ import java.util.Map;
 import java.util.Scanner;
 
 public class AddressBookMain {
+
     public static void main(String[] args)
     {
-        System.out.println("WELCOME TO ADDRESS BOOK PROGRAM");
+        System.out.println( "WELCOME TO ADDRESS BOOK PROGRAM" );
         Map<String, AddressBook> map = new HashMap<>();
         System.out.println("Enter Number of address book you want to add");
         Scanner scan = new Scanner(System.in);
@@ -23,5 +24,4 @@ public class AddressBookMain {
         }
         System.out.println(map);
     }
-
 }
