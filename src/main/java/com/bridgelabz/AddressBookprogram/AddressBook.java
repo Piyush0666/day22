@@ -5,7 +5,6 @@ import java.util.*;
 public class AddressBook {
     public List<Contacts> list = new ArrayList<>();
     Scanner scan = new Scanner(System.in);
-
     public void operation() {
         System.out.println("Enter Number of contact you want to add");
         int count = scan.nextInt();
@@ -18,7 +17,7 @@ public class AddressBook {
         boolean status = true;
         do {
 
-            System.out.println("Enter the number according to to requirment");
+            System.out.println("Enter the number according to to requirement");
             System.out.println("Enter 1 to Add");
             System.out.println("Enter 2 to Edit");
             System.out.println("Enter 3 to Delete");
@@ -141,6 +140,12 @@ public class AddressBook {
         }
     }
 
+    public void countList() {
+        Long total;
+        total = list.stream().count();
+        System.out.println(total);
+    }
+
     public void sortCity() {
         Collections.sort(list, Sort.compareCity);
     }
@@ -148,7 +153,6 @@ public class AddressBook {
     public void sortState() {
         Collections.sort(list, Sort.compareState);
     }
-
 
     @Override
     public String toString() {
