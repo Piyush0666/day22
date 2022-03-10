@@ -33,7 +33,7 @@ public class AddressBook {
                     delete();
                     break;
                 default:
-                    status =false;
+                    status = false;
             }
         } while (status);
     }
@@ -139,9 +139,16 @@ public class AddressBook {
         while (it.hasNext()) {
             System.out.println(it.next());
         }
-    } public void sortCity() {
+    }
+
+    public void sortCity() {
         Collections.sort(list, Sort.compareCity);
     }
+
+    public void sortState() {
+        Collections.sort(list, Sort.compareState);
+    }
+
 
     @Override
     public String toString() {
